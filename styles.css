@@ -1,0 +1,166 @@
+/* Variables */
+:root {
+    --fondo: hsl(148, 38%, 91%);
+    --grey: hsl(187, 24%, 22%);
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: 'Karla';
+
+}
+
+
+body {
+    background-color: hsl(148, 38%, 91%);
+}
+
+.container-form {
+    display: flex;
+    background-color: hsl(0, 0%, 99%);
+    width: 630px;
+    height: 650px;
+    flex-direction: column;
+    margin: 4% 30%;
+    border-radius: 2%;
+    gap: 6rem;
+    padding: 0;
+
+}
+
+/* Contact us */
+h1 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 6%;
+}
+
+/* Nombre y apellidos  */
+.information {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+
+}
+
+.personal-information {
+    margin-left: 8%;
+}
+
+.name-information,
+.lastName-information {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: -30px;
+}
+
+.name-information input,
+.lastName-information input {
+    width: 270px;
+    height: 35px;
+    border-radius: 5px;
+    border-color: var(--grey);
+
+
+}
+
+/* Email */
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px auto;
+    margin-left: -10px;
+
+}
+
+.email input {
+    width: 563px;
+    height: 35px;
+    border-color: var(--grey);
+    border-radius: 5px;
+}
+
+.email label {
+    margin: 8px 0;
+}
+
+
+/* Query */
+.opciones-query {
+    display: flex;
+    justify-content: space-around;
+    border-color: var(--grey)
+}
+
+.opcion1,
+.opcion2 {
+    width: 275px;
+    height: 35px;
+    margin-left: -30px;
+    border: solid;
+    border-radius: 5px;
+    /* align-items: center; */
+
+
+}
+
+
+.opcion1 label,
+.opcion2 label {
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0;
+
+
+}
+
+.opcion1 input,
+.opcion2 input {
+    margin: 10px 20px;
+
+}
+
+.message {
+    width: 95%;
+    border-radius: 5px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Checkbox */
+.checkbox {
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -5px;
+
+}
+
+.checkbox input{
+    border-radius: 20px;
+    width: 15px;
+    margin-left: 10px;
+}
+
+.checkbox p {
+    margin-left: 10px;
+}
+
+/* Submit */
+.submit-button{
+    width: 95%;
+    height: 45px;
+    border-radius: 5px;
+    color: hsl(148, 38%, 91%);
+    background-color: hsl(169, 82%, 27%);
+    border-color: #ffff solid;
+    text-align: center;
+}

@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
+  <div class="container-form">
+    <form action="">
+      <h1 class="contactUs">Contact Us</h1>
+      <div class="personal-information">
+        <!-- Nombre y Apellidos-->
+        <div class="information">
+          <div class="name-information">
+            <label for="name">First Name</label>
+            <input type="text" required>
+          </div>
+          <div class="lastName-information">
+            <label for="lastName">Last Name</label>
+            <input type="text" required>
+          </div>
+        </div>
 
-  Contact Us
 
-  First Name
+        <!-- Email -->
+        <div class="email">
+          <label for="email-address">Email Address</label>
+          <input type="text" required>
+        </div>
+        <!-- Query -->
+        <div class="query-container">
+          <p>Query Type</p>
+          <div class="opciones-query">
+            <article class="opcion1">
+              <input type="radio" id="General">
+              <label for="General">General Enquiry</label>
+            </article>
+            
+            <article class="opcion2">
+              <input type="radio" id="General">
+              <label for="Support">Support Request</label>
+            </article>
+
+          </div>
+          </div>
+
+          <!-- Message -->
+        <div class="message-div">
+          <p>Message</p>
+          <input type="text" class="message"> 
+        </div>
+
+        <!-- Concentimiento checkbox -->
+        <div class="checkbox">
+          <input type="checkbox">
+          <p>I consent to being contacted by the team</p>
+        </div>
+        <!-- submit -->
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+
+  <!-- 
   This field is required
 
-  Last Name
+  
   This field is required
 
   Email Address
   Please enter a valid email address
   This field is required
 
-  Query Type
+
   General Enquiry
   Support Request
   Please select a query type
@@ -36,17 +91,14 @@
   Message
   This field is required
 
-  I consent to being contacted by the team
+  
   To submit this form, please consent to being contacted
 
   Submit
 
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  Thanks for completing the form. We'll be in touch soon! -->
+  <script src="./index.js"></script>
 </body>
+
 </html>
