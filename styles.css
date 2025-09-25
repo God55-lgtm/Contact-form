@@ -2,6 +2,7 @@
 :root {
     --fondo: hsl(148, 38%, 91%);
     --grey: hsl(187, 24%, 22%);
+    --estilo-borde:1px solid #9a9595;
 }
 
 @font-face {
@@ -65,7 +66,7 @@ h1 {
     width: 270px;
     height: 35px;
     border-radius: 5px;
-    border-color: var(--grey);
+    border: var(--estilo-borde);
 
 
 }
@@ -83,7 +84,7 @@ h1 {
 .email input {
     width: 563px;
     height: 35px;
-    border-color: var(--grey);
+    border: var(--estilo-borde);
     border-radius: 5px;
 }
 
@@ -96,7 +97,7 @@ h1 {
 .opciones-query {
     display: flex;
     justify-content: space-around;
-    border-color: var(--grey)
+    border-color: var(--estilo-borde)
 }
 
 .opcion1,
@@ -104,9 +105,9 @@ h1 {
     width: 275px;
     height: 35px;
     margin-left: -30px;
-    border: solid;
     border-radius: 5px;
     /* align-items: center; */
+    border: 1px solid #9a9595
 
 
 }
@@ -117,7 +118,8 @@ h1 {
     text-align: center;
     justify-content: center;
     margin: 10px 0;
-
+    background-color: #ffffff
+    
 
 }
 
@@ -127,12 +129,15 @@ h1 {
 
 }
 
+/* Message */
 .message {
-    width: 95%;
+    width: 98%;
     border-radius: 5px;
     height: 100px;
-    margin: 0;
+    margin-left: -9px;
+
     padding: 0;
+    border: var(--estilo-borde);
 }
 
 /* Checkbox */
@@ -156,11 +161,16 @@ h1 {
 
 /* Submit */
 .submit-button{
-    width: 95%;
+    width: 98%;
     height: 45px;
     border-radius: 5px;
     color: hsl(148, 38%, 91%);
     background-color: hsl(169, 82%, 27%);
     border-color: #ffff solid;
     text-align: center;
+    margin-left: -10px;
+    margin-top: 10px;
+    border: var(--estilo-borde);
+    
+    
 }
