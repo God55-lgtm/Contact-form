@@ -22,49 +22,53 @@
         <!-- Nombre y Apellidos-->
         <div class="information">
           <div class="name-information">
-            <label for="name">First Name</label>
-            <input type="text" required>
+            <label for="name">First Name<span class="span">*</span></label>
+            <input type="text" required class="name-input">
           </div>
           <div class="lastName-information">
-            <label for="lastName">Last Name</label>
-            <input type="text" required>
+            <label for="lastName">Last Name<span class="span">*</span></label>
+            <input type="text" required class="lastName-input">
           </div>
         </div>
 
 
         <!-- Email -->
         <div class="email">
-          <label for="email-address">Email Address</label>
-          <input type="text" required>
+          <label for="email-address">Email Address<span class="span">*</span></label>
+          <input type="text" required class="email-input">
         </div>
+
         <!-- Query -->
         <div class="query-container">
-          <p>Query Type</p>
+          <p>Query Type<span class="span">*</span></p>
           <div class="opciones-query">
             <article class="opcion1">
-              <input type="radio" id="General">
+              <input type="radio" id="General" name="queryType" class="query-general" required>
               <label for="General">General Enquiry</label>
             </article>
-            
+
             <article class="opcion2">
-              <input type="radio" id="General">
+              <input type="radio" id="Support" name="queryType" class="query-support" required>
               <label for="Support">Support Request</label>
             </article>
-
           </div>
-          </div>
+        </div>
 
-          <!-- Message -->
+        <!-- Message -->
         <div class="message-div">
-          <p>Message</p>
-          <input type="text" class="message"> 
+          <p>Message<span class="span">*</span></p>
+          <textarea class="message" required></textarea>
         </div>
 
         <!-- Concentimiento checkbox -->
-        <div class="checkbox">
-          <input type="checkbox">
-          <p>I consent to being contacted by the team</p>
+        <div class="checkbox-container">
+          <div class="checkbox">
+            <input type="checkbox" required>
+            <p>I consent to being contacted by the team<span class="span">*</span></p>
+          </div>
+
         </div>
+
         <!-- submit -->
         <button type="submit" class="submit-button">Submit</button>
       </div>
@@ -72,32 +76,6 @@
     </form>
   </div>
 
-
-  <!-- 
-  This field is required
-
-  
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
   <script src="./index.js"></script>
 </body>
 

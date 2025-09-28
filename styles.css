@@ -1,9 +1,13 @@
 /* Variables */
 :root {
     --fondo: hsl(148, 38%, 91%);
-    --grey: hsl(187, 24%, 22%);
-    --estilo-borde:1px solid #9a9595;
+    --grey-letras: hsl(180, 1%, 22%);
+    --estilo-borde: 1px solid #9a9595;
+    --rojo: hsl(0, 66%, 54%);
+    --verde: hsl(169, 82%, 27%);
 }
+
+/* Generales */
 
 @font-face {
     font-family: 'Karla';
@@ -17,39 +21,57 @@
 
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     background-color: hsl(148, 38%, 91%);
 }
 
+
+.span {
+    color: hsl(169, 82%, 27%);
+    margin-left: 8px;
+}
+
+
+
+/* Contenedor de todo */
 .container-form {
     display: flex;
     background-color: hsl(0, 0%, 99%);
-    width: 630px;
-    height: 650px;
+    width: 640px;
+    height: auto;
     flex-direction: column;
-    margin: 4% 30%;
+    margin: 0 auto;
     border-radius: 2%;
-    gap: 6rem;
-    padding: 0;
+    margin-top: 50px;
+    gap: 2rem;
+    padding: 40px;
 
 }
 
 /* Contact us */
 h1 {
-    font-size: 25px;
-    margin-top: 20px;
-    margin-left: 6%;
+    font-size: 32px;
+    margin-top: 0;
+    margin-left: 0;
+    color: var(--grey-letras);
+    margin-bottom: 30px;
 }
 
 /* Nombre y apellidos  */
 .information {
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-
+    gap: 15px;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 25px;
+    color: var(--grey-letras);
 }
 
 .personal-information {
-    margin-left: 8%;
+    margin-left: 0;
 }
 
 .name-information,
@@ -57,17 +79,19 @@ h1 {
     display: flex;
     justify-content: left;
     flex-direction: column;
-    gap: 5px;
-    margin-left: -30px;
+    gap: 10px;
+    margin-left: 0;
+    margin-top: 10px;
 }
 
 .name-information input,
 .lastName-information input {
-    width: 270px;
-    height: 35px;
+    width: 310px;
+    height: 40px;
     border-radius: 5px;
     border: var(--estilo-borde);
-
+    padding: 0 15px;
+    box-sizing: border-box;
 
 }
 
@@ -76,16 +100,20 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px auto;
-    margin-left: -10px;
+    margin: 25px 0;
+    margin-left: 0x;
+    color: var(--grey-letras);
+    gap: 10px;
 
 }
 
 .email input {
-    width: 563px;
-    height: 35px;
+    width: 100%;
+    height: 40px;
     border: var(--estilo-borde);
     border-radius: 5px;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .email label {
@@ -96,30 +124,49 @@ h1 {
 /* Query */
 .opciones-query {
     display: flex;
-    justify-content: space-around;
-    border-color: var(--estilo-borde)
+    justify-content: space-between;
+    border-color: var(--estilo-borde);
+    color: var(--grey-letras);
+    gap: 15px;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    /* Aumenta el tamaño 1.5 veces */
+    margin-right: 12px;
 }
 
 .opcion1,
 .opcion2 {
-    width: 275px;
-    height: 35px;
-    margin-left: -30px;
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
     border-radius: 5px;
-    /* align-items: center; */
-    border: 1px solid #9a9595
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border: 1px solid #9a9595;
+    color: var(--grey-letras);
 
+}
 
+.opciones-query:hover,
+.opcion1:hover,
+.opcion2:hover,
+.opciones-query:hover,
+.query-container label:hover{
+    cursor: pointer;
 }
 
 
 .opcion1 label,
 .opcion2 label {
     text-align: center;
-    justify-content: center;
     margin: 10px 0;
-    background-color: #ffffff
-    
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    width: 100%;
 
 }
 
@@ -129,48 +176,404 @@ h1 {
 
 }
 
+.query-container p {
+    margin-left: 0;
+    margin-bottom: 12px;
+}
+
 /* Message */
 .message {
-    width: 98%;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 8px;
     height: 100px;
-    margin-left: -9px;
-
+    margin-left: 0;
     padding: 0;
     border: var(--estilo-borde);
+    color: var(--grey-letras);
+    padding: 15px;
+    box-sizing: border-box;
+    
+}
+
+.message-div p {
+    margin-left: 0;
+    margin-bottom: 12px;
+}
+
+.message:focus {
+    border: 2px solid var(--verde) !important;
+    outline: none;
+}
+
+
+.message:hover {
+    border-color: var(--verde);
+}
+
+textarea{
+    resize: none;
 }
 
 /* Checkbox */
 .checkbox {
-    margin: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: flex-start;
-    margin-left: -5px;
+    margin-left: 0;
+    padding: 0;
+    border-radius: 8px;
+    color: var(--grey-letras);
 
 }
 
-.checkbox input{
-    border-radius: 20px;
+input[type="checkbox"] {
+    transform: scale(1.1);
+    margin-right: 10px;
+
+}
+
+.checkbox input {
+    border-radius: 25px;
     width: 15px;
-    margin-left: 10px;
+    justify-content: center;
+    margin-left: 0;
 }
 
 .checkbox p {
-    margin-left: 10px;
+    margin-left: 0;
+    color: var(--grey-letras);
 }
 
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
 /* Submit */
-.submit-button{
-    width: 98%;
+.submit-button {
+    width: 100%;
     height: 45px;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 18px;
     color: hsl(148, 38%, 91%);
     background-color: hsl(169, 82%, 27%);
     border-color: #ffff solid;
     text-align: center;
-    margin-left: -10px;
+    margin-left: 0;
     margin-top: 10px;
     border: var(--estilo-borde);
+
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color:hsl(169, 86%, 14%);
+}
+
+
+
+label {
+    font-size: 16px;
+}
+
+/*Estilo Mensaje error */
+input .error {
+    border-color: var(--rojo);
+}
+
+/* Estilo de input FOCUS */
+input[type="text"]:focus,
+input[type="email"]:focus,
+.message:focus {
+    border: 2px solid var(--verde) !important;
+    outline: none;
+}
+
+input[type="radio"]:checked {
+    accent-color: var(--verde);
+}
+
+.opcion1:has(input[type="radio"]:checked),
+.opcion2:has(input[type="radio"]:checked) {
+    border: 2px solid var(--verde);
+    background-color: var(--fondo);
+
+}
+
+.opcion1:has(input[type="radio"]:checked) label,
+.opcion2:has(input[type="radio"]:checked) label {
+    background-color: transparent !important;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: var(--verde);
+
+}
+
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+.message:hover{
+    border-color: var(--verde);
+    cursor: pointer;
+}
+
+.checkbox p:hover {
+    cursor: pointer;
+}
+
+
+/* Mensjae de exito */
+.success-message-js {
+    background-color: var(--verde);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: 'Karla', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 70px;
+}
+
+.success-message-js::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.success-message-js h2 {
+    margin: 0 0 10px 0;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.success-message-js p {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Estilo para cuando se muestra el mensaje de éxito */
+.form-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* ===== ESTILOS RESPONSIVOS ===== */
+
+/* Tablet - 768px y menos */
+@media (max-width: 768px) {
+    .container-form {
+        width: 90%;
+        padding: 25px;
+        margin-top: 20px;
+    }
     
+    .information {
+        flex-direction: column;
+        gap: 0;
+    }
     
+    .name-information input,
+    .lastName-information input {
+        width: 100%;
+    }
+    
+    .opciones-query {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .success-message-js {
+        padding: 20px;
+        padding-left: 60px;
+    }
+    
+    .success-message-js::before {
+        left: 20px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Móvil - 375px y menos */
+@media (max-width: 375px) {
+    .container-form {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    body {
+        align-items: flex-start;
+        background-color: white;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    /* Información personal - una columna */
+    .information {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 20px;
+    }
+    
+    .name-information,
+    .lastName-information {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    .name-information input,
+    .lastName-information input {
+        width: 100%;
+        height: 45px;
+    }
+    
+    /* Email */
+    .email {
+        margin: 0 0 25px 0;
+    }
+    
+    .email input {
+        height: 45px;
+    }
+    
+    /* Query Type - en columna */
+    .opciones-query {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .opcion1,
+    .opcion2 {
+        height: 50px;
+        padding: 0 15px;
+        width: 100%;
+    }
+    
+    input[type="radio"] {
+        transform: scale(1.2);
+        margin-right: 10px;
+    }
+    
+    .query-container p {
+        margin-bottom: 15px;
+    }
+    
+    /* Message */
+    .message-div p {
+        margin-bottom: 15px;
+    }
+    
+    .message {
+        height: 120px;
+    }
+    
+    /* Checkbox */
+    .checkbox {
+        margin-top: 25px;
+        align-items: flex-start;
+    }
+    
+    .checkbox p {
+        line-height: 1.4;
+    }
+    
+    /* Submit button */
+    .submit-button {
+        height: 50px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    /* Labels más claros como en la imagen */
+    label {
+        font-size: 15px;
+        margin-bottom: 8px;
+        display: block;
+    }
+    
+    /* Asteriscos en rojo */
+    .span {
+        color: var(--rojo);
+        margin-left: 4px;
+    }
+    
+    /* Mensaje de éxito móvil */
+    .success-message-js {
+        padding: 20px;
+        padding-left: 55px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+    
+    .success-message-js::before {
+        left: 15px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .success-message-js h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    
+    .success-message-js p {
+        font-size: 14px;
+    }
+}
+
+/* Móvil muy pequeño - 320px y menos */
+@media (max-width: 320px) {
+    .container-form {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    .success-message-js {
+        padding: 15px;
+        padding-left: 50px;
+    }
+    
+    .success-message-js::before {
+        left: 12px;
+        width: 22px;
+        height: 22px;
+    }
+    
+    .opcion1,
+    .opcion2 {
+        height: 45px;
+        padding: 0 12px;
+    }
 }
