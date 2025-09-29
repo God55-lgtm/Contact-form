@@ -144,7 +144,7 @@ input[type="radio"] {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     border: 1px solid #9a9595;
     color: var(--grey-letras);
 
@@ -415,7 +415,6 @@ input[type="email"]:hover,
         height: 25px;
     }
 }
-
 /* Móvil - 375px y menos */
 @media (max-width: 375px) {
     .container-form {
@@ -465,59 +464,75 @@ input[type="email"]:hover,
         height: 45px;
     }
     
-    /* Query Type - en columna */
+    /* Query Type - en columna y más compacto */
     .opciones-query {
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
     }
     
     .opcion1,
     .opcion2 {
-        height: 50px;
-        padding: 0 15px;
+        height: 40px; /* Más pequeño como los inputs */
+        padding: 0 12px;
         width: 100%;
     }
     
     input[type="radio"] {
-        transform: scale(1.2);
-        margin-right: 10px;
+        transform: scale(1.1); /* Más pequeño */
+        margin-right: 8px;
+    }
+    
+    .opcion1 label,
+    .opcion2 label {
+        margin: 0;
+        font-size: 14px; /* Texto más pequeño */
     }
     
     .query-container p {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     
-    /* Message */
+    /* Message más compacto */
     .message-div p {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     
     .message {
-        height: 120px;
+        height: 80px; /* Más pequeño */
+        padding: 10px;
+        font-size: 14px;
     }
     
     /* Checkbox */
     .checkbox {
-        margin-top: 25px;
+        margin-top: 20px;
         align-items: flex-start;
     }
     
     .checkbox p {
         line-height: 1.4;
+        font-size: 14px;
     }
     
     /* Submit button */
     .submit-button {
-        height: 50px;
+        height: 45px;
         font-size: 16px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     
     /* Labels más claros como en la imagen */
     label {
-        font-size: 15px;
-        margin-bottom: 8px;
+        font-size: 14px;
+        margin-bottom: 6px;
         display: block;
+    }
+    
+    /* Títulos de secciones */
+    .query-container p,
+    .message-div p {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
     
     /* Asteriscos en rojo */
@@ -528,28 +543,27 @@ input[type="email"]:hover,
     
     /* Mensaje de éxito móvil */
     .success-message-js {
-        padding: 20px;
-        padding-left: 55px;
-        margin-bottom: 20px;
+        padding: 15px;
+        padding-left: 50px;
+        margin-bottom: 15px;
         border-radius: 8px;
     }
     
     .success-message-js::before {
         left: 15px;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
     
     .success-message-js h2 {
-        font-size: 20px;
-        margin-bottom: 8px;
+        font-size: 18px;
+        margin-bottom: 6px;
     }
     
     .success-message-js p {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
-
 /* Móvil muy pequeño - 320px y menos */
 @media (max-width: 320px) {
     .container-form {
@@ -574,6 +588,6 @@ input[type="email"]:hover,
     .opcion1,
     .opcion2 {
         height: 45px;
-        padding: 0 12px;
+        /* padding: 0 12px; */
     }
 }
