@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkboxContainer = document.querySelector('.checkbox-container')
     const opcionesQuery = document.querySelector('.opciones-query')
     const botonSubmit = document.querySelector('.submit-button')
+    const parrafo = document.getElementById('marqueAqui')
 
 
     console.log(emailInput);
@@ -216,38 +217,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funcion de Mostrar mensaje al hacer submit
     function mostrarMensajeExito() {
-    // Si existe el mensaje, borralo
-    const mensajeExistente = document.querySelector('.success-message-js');
-    if (mensajeExistente) mensajeExistente.remove();
+        // Si existe el mensaje, borralo
+        const mensajeExistente = document.querySelector('.success-message-js');
+        if (mensajeExistente) mensajeExistente.remove();
 
-    // Crear mensaje
-    const successMensaje = document.createElement('div')
-    successMensaje.className = 'success-message-js';
-    successMensaje.innerHTML = `
+        // Crear mensaje
+        const successMensaje = document.createElement('div')
+        successMensaje.className = 'success-message-js';
+        successMensaje.innerHTML = `
         <h2>Message Sent!</h2>
         <p>Thanks for completing the form. We'll be in touch soon!</p>
     `;
 
-    form.parentNode.insertBefore(successMensaje, form);
-    form.classList.add('form-disabled');
-}
+        form.parentNode.insertBefore(successMensaje, form);
+        form.classList.add('form-disabled');
+    }
 
     function ocultarMensajeExito() {
-    // Remover el mensaje de éxito
-    const successMessage = document.querySelector('.success-message-js');
-    if (successMessage) successMessage.remove();
+        // Remover el mensaje de éxito
+        const successMessage = document.querySelector('.success-message-js');
+        if (successMessage) successMessage.remove();
 
-    // Restaurar el formulario
-    form.classList.remove('form-disabled');
-    form.reset();
+        // Restaurar el formulario
+        form.classList.remove('form-disabled');
+        form.reset();
 
-    // Limpiar estilos de radio buttons
-    document.querySelectorAll('.opcion1, .opcion2').forEach(contenedor => {
-        contenedor.classList.remove('radio-seleccionado');
-        contenedor.style.backgroundColor = '';
-        contenedor.style.borderColor = '#9a9595';
-    });
-}
+        // Limpiar estilos de radio buttons
+        document.querySelectorAll('.opcion1, .opcion2').forEach(contenedor => {
+            contenedor.classList.remove('radio-seleccionado');
+            contenedor.style.backgroundColor = '';
+            contenedor.style.borderColor = '#9a9595';
+        });
+    }
+
+
+    // Marcar la casilla con el texto
+    parrafo.onclick = function(){
+        checkbox.checked = !checkbox.checked;
+    }
 
 
 
