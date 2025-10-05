@@ -46,10 +46,10 @@ body {
     width: 90%;
     height: auto;
     flex-direction: column;
-    margin: 20px auto;
+    margin: 230px auto;
     border-radius: 2%;
     gap: 2rem;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
