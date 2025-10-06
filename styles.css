@@ -245,9 +245,8 @@ input[type="checkbox"] {
     margin-left: 0;
 }
 
-.checkbox p {
-    margin-left: 0;
-    color: var(--grey-letras);
+.checkbox-container label:hover {
+    cursor: pointer;
 }
 
 .checkbox-container {
@@ -255,6 +254,11 @@ input[type="checkbox"] {
     flex-direction: column;
     margin: 0;
     padding: 0;
+
+}
+
+.checkbox-container:hover{
+    cursor: pointer;
 }
 
 

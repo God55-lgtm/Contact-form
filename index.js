@@ -251,10 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // Marcar la casilla con el texto
-    parrafo.onclick = function(){
-        checkbox.checked = !checkbox.checked;
-    }
+    
 
 
 
